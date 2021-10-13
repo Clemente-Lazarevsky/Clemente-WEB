@@ -1,0 +1,275 @@
+/* ------------ ANIMATED CHARTS ------------ */
+/* Container styles */
+
+/* @media (min-width: 20rem) {
+.container {
+    display: none;
+}
+}
+@media (min-width: 32.5rem) {
+.container {
+    display: inline-block;
+    padding: 10px 0;
+    text-align: left;
+}
+} */
+
+#animated_charts-container {
+    max-width: 20rem;
+}
+
+.chart {
+position: relative;
+display: inline-block;
+color: #47bec7;
+font-size: 12px;
+text-align: center;
+}
+
+.chart figcaption {
+padding: 25px 25px;
+width: 64px;
+height: 64px;
+border: 3px solid #47bec7;
+opacity: 0.3;
+border-radius: 100px;
+/* line-height: 50px; */
+color: #02012B;
+}
+
+.chart img {
+position: absolute;
+max-width: 1.8rem;
+max-height: 1.8rem;
+/* background: white; */
+}
+/* END Container styles */
+
+/* Colors for the circles and positions for the graphics */
+.photoshop, .illustrator, .indesign, .aftereffects, .premier, .xd, .figma {
+top: 18px;
+left: 18px;
+}
+.html {
+top: 20px;
+left: 18px;
+}
+.css {
+top: 20px;
+left: 19px;
+}
+
+.photoshop + svg .outer {
+/* stroke: #47bec7; */
+stroke: #31a8ff;
+}
+.illustrator + svg .outer {
+stroke: #ff9a00;
+}
+.indesign + svg .outer {
+stroke: #ff3366;
+}
+.aftereffects + svg .outer {
+stroke: #9999ff;
+}
+/* .premier + svg .outer {
+stroke: #9999ff;
+} */
+.xd + svg .outer {
+stroke: #FF61F6;
+}
+.figma + svg .outer {
+stroke: #0acf83;
+}
+.html + svg .outer {
+stroke: #e34f26;
+}
+.css + svg .outer {
+stroke: #0d84ce;
+}
+
+
+.chart svg {
+position: absolute;
+top: -18px;
+left: -18px;
+}
+
+.outer {
+fill: transparent;
+stroke: #333;
+stroke-width: 3;
+stroke-dasharray: 534;
+transition: stroke-dashoffset 1s;
+-webkit-animation-play-state: running;
+
+/* firefox bug fix - won't rotate at 90deg angles */
+-moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart:hover .outer {
+stroke-dashoffset: 534 !important;
+-webkit-animation-play-state: paused;
+}
+/* END Circle colors and graphic positions */
+
+
+/* Set the initial values for the animation */
+.chart[data-percent='100'] .outer {
+stroke-dashoffset: 335;
+-webkit-animation: show100 2s;
+animation: show100 2s;
+}
+
+.chart[data-percent='88'] .outer {
+stroke-dashoffset: 368;
+-webkit-animation: show88 2s;
+animation: show88 2s;
+}
+
+.chart[data-percent='75'] .outer {
+stroke-dashoffset: 388;
+-webkit-animation: show75 2s;
+animation: show75 2s;
+}
+
+.chart[data-percent='63'] .outer {
+stroke-dashoffset: 410;
+-webkit-animation: show63 2s;
+animation: show63 2s;
+}
+
+.chart[data-percent='50'] .outer {
+stroke-dashoffset: 435;
+-webkit-animation: show50 2s;
+animation: show50 2s;
+}
+
+.chart[data-percent='25'] .outer {
+stroke-dashoffset: 485;
+-webkit-animation: show25 2s;
+animation: show25 2s;
+}
+/* END set initial animation values */
+
+/* Keyframes for the initial animation */
+@-webkit-keyframes show100 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 335;
+}
+}
+
+@keyframes show100 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 335;
+}
+}
+
+@-webkit-keyframes show88 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 368;
+}
+}
+
+@keyframes show88 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 368;
+}
+}
+
+@-webkit-keyframes show75 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 388;
+}
+}
+
+@keyframes show75 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 388;
+}
+}
+
+@-webkit-keyframes show63 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 410;
+}
+}
+
+@keyframes show63 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 410;
+}
+}
+
+@-webkit-keyframes show50 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 435;
+}
+}
+
+@keyframes show50 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 435;
+}
+}
+
+@-webkit-keyframes show25 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 485;
+}
+}
+
+@keyframes show25 {
+from {
+    stroke-dashoffset: 537;
+}
+
+to {
+    stroke-dashoffset: 485;
+}
+}
+/* END Keyframes for the initial animation */
