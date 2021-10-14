@@ -20,6 +20,8 @@ $heading_light_color: rgba($heading_color, .5);
 $font-family: 'Montserrat', serif;
 $font-family-body: 'Montserrat', serif;
 
+@import "animated-charts";
+
 @import 'site-base';
 @import 'site-navbar';
 @import 'site-blocks';
