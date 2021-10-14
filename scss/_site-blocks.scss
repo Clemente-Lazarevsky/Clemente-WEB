@@ -1,7 +1,24 @@
 .custom-hero {
-	padding-top: 100px;
-	padding-bottom: 50px;
-	text-align: center;
+	// padding-top: 100px;
+	// padding-bottom: 50px;
+	// text-align: center;
+	margin-top: 2.5rem;
+
+	.custom-hero-img {
+		background-image: url(/img/avtofoto.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right;
+	}
+
+	.cutom-hero-right-container {
+		background-color: rgb(221, 206, 186);
+	}
+
+	.custom-hero-text {
+		padding: 50px;
+		max-width: 600px;
+	}
 
 	.hero-heading {
 		font-size: 60px;
@@ -35,7 +52,6 @@
 		font-size: 18px;
 	}
 }
-
 
 .site-section, .section, .section-2, .section-4 {
 	padding: 100px 0;

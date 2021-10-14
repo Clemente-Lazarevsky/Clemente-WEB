@@ -1010,9 +1010,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 .custom-hero {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.custom-hero .custom-hero-img {
+  background-image: url(/img/avtofoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.custom-hero .cutom-hero-right-container {
+  background-color: #ddceba;
+}
+
+.custom-hero .custom-hero-text {
+  padding: 50px;
+  max-width: 600px;
 }
 
 .custom-hero .hero-heading {
