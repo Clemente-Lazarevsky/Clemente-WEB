@@ -1,0 +1,23 @@
+// Charts styles
+.chart {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    /* background-color: rgb(127, 178, 224); */
+  }
+  .chart img {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    top: 35px;
+    left: 35px;
+  }
+  .chart-html img {
+    top: 37px;
+  }
+  .chart-css img {
+    top: 38px;
+    left: 36px;
+  }
