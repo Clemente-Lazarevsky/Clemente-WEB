@@ -771,7 +771,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 .custom-hero .custom-hero-img {
-  background-image: url(/img/avtofoto.jpg);
+  background-image: url(../img/avtofoto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
