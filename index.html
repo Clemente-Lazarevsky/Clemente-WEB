@@ -31,6 +31,32 @@
   <link rel="stylesheet" href="css/style.css">
 
   <title>Home</title>
+
+  <style>
+    .chart {
+      position: relative;
+      display: inline-block;
+      width: 110px;
+      height: 110px;
+      text-align: center;
+      /* background-color: rgb(127, 178, 224); */
+    }
+    .chart img {
+      position: absolute;
+      display: inline-block;
+      width: 40px;
+      top: 35px;
+      left: 35px;
+    }
+    .chart-html img {
+      top: 37px;
+    }
+    .chart-css img {
+      top: 38px;
+      left: 36px;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -209,7 +235,7 @@
   </nav>
 
 
-  <!-- <div class="custom-hero">
+  <div class="custom-hero">
     <div class="container">
       <div class="row">
         <div class="custom-hero-img col-lg-6"></div>
@@ -220,9 +246,9 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
-  <div class="custom-hero">
+  <!-- <div class="custom-hero">
       <div class="row">
         <div class="custom-hero-img col-lg-6"></div>
         <div class="cutom-hero-right-container col-lg-6 p-0">
@@ -233,7 +259,7 @@
           </div>
         </div>
       </div>
-  </div>
+  </div> -->
 
   <div class="site-section">
     <div class="container">
@@ -244,9 +270,27 @@
             <span class="d-inline-block">Tools I'm using at my work</span>
             <div  class="line mx-auto mb-3 mt-3"></div>
           </div>
+          <span class="chart chart-ps" data-percent="100">
+            <img src="/img/icons/Ps-normal.svg" alt="Photoshop Icon">
+          </span>
+          <span class="chart chart-ai" data-percent="100">
+            <img src="/img/icons/Ai-normal.svg" alt="Illustrator Icon">
+          </span><span class="chart chart-id" data-percent="90">
+            <img src="/img/icons/Id-normal.svg" alt="Indesign Icon">
+          </span><span class="chart chart-ae" data-percent="80">
+            <img src="/img/icons/Ae-normal.svg" alt="After Effects Icon">
+          </span><span class="chart chart-xd" data-percent="60">
+            <img src="/img/icons/Xd-normal.svg" alt="Xd Icon">
+          </span><span class="chart chart-fg" data-percent="50">
+            <img src="/img/icons/Figma.svg" alt="Figma Icon">
+          </span><span class="chart chart-html" data-percent="40">
+            <img src="https://dl.dropboxusercontent.com/s/68gv23q4y5qyq52/html5.svg" alt="HTML5 Icon">
+          </span><span class="chart chart-css" data-percent="40">
+            <img src="https://dl.dropboxusercontent.com/s/gftbpqje9h2jvlv/css3.svg" alt="CSS Icon">
+          </span>
         </div>
 
-        <div id="animated_charts-container" class="container text-center">
+        <!-- <div id="animated_charts-container" class="container text-center">
           <div class="d-flex justify-content-center">
             <div class="col">
               <figure class="chart" data-percent="100">
@@ -323,7 +367,7 @@
             </figure>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
 
@@ -842,6 +886,145 @@
 
   <script src="js/custom.js"></script>
 
+	<script src="/js/jquery.easypiechart.js"></script>
+	<script>
+    $(function() {
+      $('.chart-ps').easyPieChart({
+        barColor: '#31a8ff',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+    $(function() {
+      $('.chart-ai').easyPieChart({
+        barColor: '#ff9a00',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+    $(function() {
+      $('.chart-id').easyPieChart({
+        barColor: '#ff3366',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+    $(function() {
+      $('.chart-ae').easyPieChart({
+        barColor: '#9999ff',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+    $(function() {
+      $('.chart-xd').easyPieChart({
+        barColor: '#ff61f6',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+    $(function() {
+      $('.chart-fg').easyPieChart({
+        barColor: '#09cf83',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+    $(function() {
+      $('.chart-html').easyPieChart({
+        barColor: '#e34f26',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+    $(function() {
+      $('.chart-css').easyPieChart({
+        barColor: '#0c84ce',
+        trackColor: '#cacbcd',
+        scaleLength: 15,
+        lineCap: 'round',
+        size: 110,
+        lineWidth: 3,
+        easing: function (x, t, b, c, d) { // easing function
+          t = t / (d/2);
+          if (t < 1) {
+            return c / 2 * t * t + b;
+          }
+          return -c/2 * ((--t)*(t-2) - 1) + b;
+        }
+      });
+    });
+	</script>
   
 </body>
 </html>
