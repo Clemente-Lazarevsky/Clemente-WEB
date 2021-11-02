@@ -7,6 +7,23 @@
 * Twitter: https://twitter.com/Untree_co
 * Facebook: https://web.facebook.com/Untree.co/
 */
+
+/* Count-numbers status  */
+.stats .number-wrapper {
+  font-size: 30px;
+  color: #000000; }
+
+.stats .number {
+  font-size: 30px;
+  font-weight: 500; }
+
+.stats p {
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4; }
+
+
+  
 .chart {
   position: relative;
   display: inline-block;
